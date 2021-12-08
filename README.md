@@ -1,5 +1,7 @@
 # js-from-fundamentals-to-functional-js
 
+**by** _ical balino_
+
 _"Functional programming is about verbs, object oriented programming is about the nouns"_
 
 Strengthen your understanding of tricky JavaScript concepts by : 
