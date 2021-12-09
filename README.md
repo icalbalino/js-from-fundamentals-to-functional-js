@@ -27,3 +27,6 @@ Primitive values get pass by value, while non-Primitive values get pass by refer
 - Assignments with Dots
 - Access with Dots
 - Arrays
+- Brackets (bracket notation)
+- Non-valid Characters
+
