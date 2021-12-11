@@ -57,3 +57,24 @@ var test = box['^&*'];
 console.log(box);
 console.log(test);
 
+
+// exercise
+/* Create an object using bracket and dot notation 
+that represents the characters and related data 
+you may find in a game of Clue. 
+*/
+
+const game = {}
+game.pembunuh = "??"
+
+game['senjata'] = [
+    { type: "keyboard", lokasi: "kamar" },
+    { type: "pen", lokasi: "perpus" }, 
+    { type: "phone", lokasi: "dapur" }
+]
+console.log(game.senjata[2].lokasi)
+
+game.name = []
+game.name.push("balino")
+game.name[1] = 'lolo'
+console.log(game.name);
