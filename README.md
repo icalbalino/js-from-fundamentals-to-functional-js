@@ -34,10 +34,10 @@ Primitive values get pass by value, while non-Primitive values get pass by refer
 - THE RULES
     - **Dots**
         1. strings ✔
-        2. numbers ✖
-        3. quotations ✖
-        4. weird characters ✖
-        5. expressions ✖
+        2. numbers ❌
+        3. quotations ❌
+        4. weird characters ❌
+        5. expressions ❌
  
     - **Brackets**
         1. strings ✔
