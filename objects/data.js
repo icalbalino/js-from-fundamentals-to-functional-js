@@ -78,3 +78,68 @@ game.name = []
 game.name.push("balino")
 game.name[1] = 'lolo'
 console.log(game.name);
+
+
+// ES6 Destructuring
+const [pertama, kedua] = ['hallo world', 'yoo'];
+console.log(pertama);
+
+const { first, second } = { first: 'you', second: 'always you' }
+console.log(second);
+
+// Exercise
+// 1. Create an object that looks like this: {"name": "Rusty", "room":"kitchen", "weapon":"candlestick"}
+// 2. Extract out the weapon and location using destructuring
+
+var { name, room, weapon } = { "name": "Rusty", "room": "kitchen", "weapon": "candlestick" }
+console.log(room);
+
+var obj = { "name": "Rusty", "room": "kitchen", "weapon": "candlestick" }
+var weapon = obj.weapon
+console.log(weapon);
+
+// Destructuring === Arrays
+var [a, b] = [1, 2]
+console.log(a, b);
+// => 1 2
+
+// omit certain values
+var [a, ,b] = [1, 2, 3]
+console.log(a, b);
+// => 1 3
+
+// combine with spread/rest operator (accumulates the rest of the values)
+var [a, ...b] = [1, 2, 3]
+console.log(a, b);
+// => 1 [ 2, 3 ]
+
+// swap variables easily without temp
+var a = 1, b = 2;
+[a, b] = [b, a]
+console.log(a, b);
+// => 2 1
+
+// advance deep arrays
+var [a, [b, [c, d]]] = [1, [2, [[[3, 4], 5], 6]]]
+console.log('a : ', a, ' b : ', b, ' c : ', c, ' d : ', d);
+// => a :  1  b :  2  c :  [ [ 3, 4 ], 5 ]  d :  6
+
+// === objects
+var { user: x } = { user: 5 }
+console.log(x);
+// => 5
+
+// fail-save
+var { user: x } = { user2: 5 }
+console.log(x);
+// => undefined
+
+// more values
+var { user1: x, user2: y } = { user1: 10, user2: 5 }
+console.log(x, y);
+// => 10 5
+
+// short-hand syntax
+var { user1, user2 } = { user1: 10, user2: 5 }
+console.log(user1, user2);
+// => 10 5

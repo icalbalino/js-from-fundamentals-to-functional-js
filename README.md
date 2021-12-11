@@ -58,4 +58,30 @@ Primitive values get pass by value, while non-Primitive values get pass by refer
     - How do you access an object that is inside another object?
     - How do you create an object that is nested inside another object?
 
+### ES6 Destructuring
+
+Destructuring is a simplified way of defining variables and taking them outside of an object or an array.
+
+Variable declarations:
+```
+
+        the target          the source
+    const [first, second] = [true, false];
+    let [first, second] = [true, false];
+    var [first, second] = [true, false];
+
+    const {first, second} = {first: 0 , second: 1}
+    let {first, second} = {first: 0 , second: 1}
+    var {first, second} = {first: 0 , second: 1}
+
+```
+
+Assignment:
+```
+
+    [first, second] = [true, false];
+
+    {first, second} = {first: 0 , second: 1}
+
+```
 
