@@ -70,6 +70,7 @@ Variable declarations:
     let [first, second] = [true, false];
     var [first, second] = [true, false];
 
+        the target          the source
     const {first, second} = {first: 0 , second: 1}
     let {first, second} = {first: 0 , second: 1}
     var {first, second} = {first: 0 , second: 1}
