@@ -32,30 +32,30 @@ Primitive values get pass by value, while non-Primitive values get pass by refer
 - Brackets (bracket notation)
 - Non-valid Characters
 - THE RULES
-    **Dots**
-    1. strings
-    2. numbers
-    3. quotations
-    4. weird characters
-    5. expressions
+    - **Dots**
+        1. strings
+        2. numbers
+        3. quotations
+        4. weird characters
+        5. expressions
  
-    **Brackets**
-    1. strings
-    2. numbers
-    3. variables
-    4. weird characters
-    5. expressions
+    - **Brackets**
+        1. strings
+        2. numbers
+        3. variables
+        4. weird characters
+        5. expressions
 
 - Recap
-    1. What is an object?
-    2. What is the difference between dot and bracket notation?
-    3. How do you add a property with a key that contains special characters?
-    4. How do you add a property whose key and value are stored in different variables?
-    5. How do we loop through objects to access the values?
-    6. When can you only use dot notation and not bracket? 
-    7. When can you only use brackets and not dot?
-    8. How do you add a property with a key that is stored in a variable?
-    9. How do you access an object that is inside another object?
-    10. How do you create an object that is nested inside another object?
+    - What is an object?
+    - What is the difference between dot and bracket notation?
+    - How do you add a property with a key that contains special characters?
+    - How do you add a property whose key and value are stored in different variables?
+    - How do we loop through objects to access the values?
+    - When can you only use dot notation and not bracket? 
+    - When can you only use brackets and not dot?
+    - How do you add a property with a key that is stored in a variable?
+    - How do you access an object that is inside another object?
+    - How do you create an object that is nested inside another object?
 
 
