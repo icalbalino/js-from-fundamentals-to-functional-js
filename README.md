@@ -86,3 +86,21 @@ Assignment:
 
 ```
 
+## List Transforms
+
+Which is one of the core things in functional utility methods, which is take a list or collection of data in different arrangements and then extract data from them by looping through it.
+
+### Nested DATA STRUCTURES
+- Nesting
+```
+
+    const game = {};
+    game['suspects'] = [];
+
+    const game = {
+        'suspects': []
+    }
+
+```
+- Nesting + Loops
+- Nesting + Destructuring
