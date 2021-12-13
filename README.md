@@ -92,28 +92,26 @@ Which is one of the core things in functional utility methods, which is take a l
 
 ### Nested DATA STRUCTURES
 - Nesting
-```
+    ```
 
-    const game = {};
-    game['suspects'] = [];
+        const game = {};
+        game['suspects'] = [];
 
-    const game = {
-        'suspects': []
-    }
+        const game = {
+            'suspects': []
+        }
 
-```
+    ```
+
 - Nesting + Loops
 - Nesting + Destructuring
 - Using Function
     - List Transformations
-    - Looping With _.each <br>
+    - Looping with `_.each` <br>
         Each using underscore style each, each takes two arguments. first thing is a list, and the second thing is the callback function also we call this the iterator function.
-    - _.each() / forEach() Defined
+    - `_.each()` / `forEach()` Defined
         ```
-            _.each(
-                ['observatory','ballroom', 'library'],
-                function(value, index, list){ ... }
-            );
+            _.each(['observatory','ballroom', 'library'], function(value, index, list){ ... });
             
             ['observatory','ballroom','library'].forEach(function(value, index, list){...});
 
@@ -124,7 +122,7 @@ Which is one of the core things in functional utility methods, which is take a l
         - Iterates over a **list** of elements, passing the values to a function.
         - Each invocation of **iterator**, the function, is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator's** arguments will be (value, key, list).
 
-    - _.each() Usage
+    - `_.each()` Usage
         ```
         
             // _.each(list,iterator)
