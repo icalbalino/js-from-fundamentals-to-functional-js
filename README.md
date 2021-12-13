@@ -111,6 +111,7 @@ Which is one of the core things in functional utility methods, which is take a l
         Each using underscore style each, each takes two arguments. first thing is a list, and the second thing is the callback function also we call this the iterator function.
     - ` _.each() ` / ` forEach() ` Defined
         ```
+            
             _.each(['observatory','ballroom', 'library'], function(value, index, list){ ... });
             
             ['observatory','ballroom','library'].forEach(function(value, index, list){...});
