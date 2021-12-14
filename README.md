@@ -125,6 +125,7 @@ Which is one of the core things in functional utility methods, which is take a l
 
     - Iterates over a **list** of elements, passing the values to a function.
     - Each invocation of **iterator**, the function, is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator's** arguments will be (value, key, list).
+    - For more **_.each()** click [here](http://underscorejs.org/#each)
 
 - `_.each()` Usage
     ```
@@ -144,7 +145,7 @@ Which is one of the core things in functional utility methods, which is take a l
     ```
 
 ## Functions
-- `.map()` Function
+- `.map()` Function <br>
     The key difference between **each** and **map** is that **each** does not return anything, the **function** does not return anything. and then **map** returns an **array** every time.
 
     We use **map** to take lists and transform them into a **new array**.
@@ -152,7 +153,7 @@ Which is one of the core things in functional utility methods, which is take a l
 - `_.map()` / `.map()` Defined
     ```
 
-        _.map([1,2,3], function(v,i,list){console.log(v)})
+        _.map([1,2,3], function (v,i,list) { console.log(v) })
 
     ```
 
@@ -166,7 +167,7 @@ Which is one of the core things in functional utility methods, which is take a l
         //_.map(list, iterator)
         const weapons = ['candlestick', 'lead pipe', 'revolver'];
 
-        const makeBroken = function(item){
+        const makeBroken = function (item) {
             return `broken ${item}`;
         };
 
@@ -183,13 +184,13 @@ Which is one of the core things in functional utility methods, which is take a l
 
 - `_.map()` vs `_.each()`
 - Looping with `_.map()`
-- `.filter()` Function
+- `.filter()` Function <br>
     Filter is a function that takes an array in a callback and it is going to return a new array that will contain, it will only contain the values that return true from the callback. So the callback has to return a boolean, either true or false. If that callback returns true, then we're going to save it to the array. If not, we won't.
 
 - `_.filter()` with Loop
 - `_.filter()` with `_.each()`
 
-- Note : <br>
+- **Note** : <br>
     If you're, because it takes less brainpower, but in the long run, you're not gaining the skill of properly modeling your program in your mind.
 
     Once you're able to model your programming in your mind, it's going to be easier for you to catch bugs without having to go back and forth, refresh, etc, rerun it, whatever it is that you're doing.
