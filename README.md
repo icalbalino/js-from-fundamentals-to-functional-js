@@ -107,6 +107,7 @@ Which is one of the core things in functional utility methods, which is take a l
 - Nesting + Destructuring
 
 ### Using Function
+- `.forEach()` Function
 - List Transformations
 - Looping with `_.each` <br>
     Each using underscore style each, each takes two arguments. first thing is a list, and the second thing is the callback function also we call this the iterator function.
