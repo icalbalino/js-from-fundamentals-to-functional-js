@@ -143,3 +143,57 @@ Which is one of the core things in functional utility methods, which is take a l
 
     ```
 
+## Functions
+- `.map()` Function
+    The key difference between **each** and **map** is that **each** does not return anything, the **function** does not return anything. and then **map** returns an **array** every time.
+
+    We use **map** to take lists and transform them into a **new array**.
+
+- `_.map()` / `.map()` Defined
+    ```
+
+        _.map([1,2,3], function(v,i,list){console.log(v)})
+
+    ```
+
+    - Produces a new array of values by mapping each value in **list** through a transformation function (**iterator**).
+    - Each invocation of **iterator** is called with three arguments: (element, index, list). If **list** is a JavaScript object, **iterator's** arguments will be (value, key, list)
+    - For more **_.map()** click [here](http://underscorejs.org/#map)
+
+- `_.map()` Usage
+    ```
+
+        //_.map(list, iterator)
+        const weapons = ['candlestick', 'lead pipe', 'revolver'];
+
+        const makeBroken = function(item){
+            return `broken ${item}`;
+        };
+
+        const brokenWeapons = _.map(weapons, makeBroken);
+
+        brokenWeapons; 
+        // [
+        //     'broken candlestick', 
+        //     'broken lead pipe', 
+        //     'broken revolver'
+        // ]
+
+    ```
+
+- `_.map()` vs `_.each()`
+- Looping with `_.map()`
+- `.filter()` Function
+    Filter is a function that takes an array in a callback and it is going to return a new array that will contain, it will only contain the values that return true from the callback. So the callback has to return a boolean, either true or false. If that callback returns true, then we're going to save it to the array. If not, we won't.
+
+- `_.filter()` with Loop
+- `_.filter()` with `_.each()`
+
+- Note : <br>
+    If you're, because it takes less brainpower, but in the long run, you're not gaining the skill of properly modeling your program in your mind.
+
+    Once you're able to model your programming in your mind, it's going to be easier for you to catch bugs without having to go back and forth, refresh, etc, rerun it, whatever it is that you're doing.
+
+    It also will help you start to understand when your code is too complicated to hold in your mind.
+
+    If your code is starting to get too complicated to hold in your mind, that is a sign that your code should be simplified. It can be rewritten in a way that is easy to hold in your mind at one time. 
