@@ -189,6 +189,7 @@ Which is one of the core things in functional utility methods, which is take a l
 
 - `_.filter()` with Loop
 - `_.filter()` with `_.each()`
+- For more **_.filter()** click [here](http://underscorejs.org/#filter)
 
 - **Note** : <br>
     If you're, because it takes less brainpower, but in the long run, you're not gaining the skill of properly modeling your program in your mind.
