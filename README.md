@@ -199,3 +199,26 @@ Which is one of the core things in functional utility methods, which is take a l
     It also will help you start to understand when your code is too complicated to hold in your mind.
 
     If your code is starting to get too complicated to hold in your mind, that is a sign that your code should be simplified. It can be rewritten in a way that is easy to hold in your mind at one time. 
+
+## Functions In-Depth
+- Anatomy of a function
+    ```
+
+        var add = function (a, b) {
+            return a + b
+        };
+
+        add(2, 2);
+
+        // var ... = function (...) => declaration/definition
+        // add                      => function name
+        // a, b                     => parameters
+        // { return a + b };        => function body
+        // add(2, 2);               => invocation/call-time
+        // 2, 2 =>                  => arguments
+
+    ```
+
+- ES6: Arrow Functions
+- Spread Operator
+- Arguments Keyword
