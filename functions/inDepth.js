@@ -201,3 +201,66 @@ var createTuple = function(a, b, c, ...d) {
 }
 createTuple('It', 'be', 'could', 'anyone', 'no one'); 
 // => [Arguments] { '0': 'It', '1': 'be', '2': 'could', '3': 'anyone', '4': 'no one' }
+
+
+// Default Parameters
+var add = function(a , b = 2) {
+   console.log(arguments); //logs [3]
+   return a + b; 
+};
+add(3); //5??
+
+
+// Exercise: write this function in ES5
+var add = function(a , b = 2){
+   console.log(arguments); //logs [3]
+   return a + b; 
+};
+add(3); //5??
+// solution
+function add(a, b) {
+    b = b || 2;
+    const hasil = a + b;
+    console.log(hasil);
+    return hasil
+}
+add(3)
+
+
+// Array Like-Object
+var constructArr = function() {
+    const arr = Array.prototype.slice.call(arguments); // it will take an array like-obejct and turn it into an array.
+    // ['was', 'it', 'in']
+    arr.push('the billiards room?');
+    // ['was', 'it', 'in', 'the billiards room?']
+    console.log(arr.join(' '));
+    return arr.join(' ');
+};
+constructArr('was', 'it', 'in');
+// => was it in the billiards room?
+
+
+// Array.from()
+var constructArr = function() {
+    const arr = Array.from(arguments);
+    arr.push('the billiards room?');
+    console.log(arr.join(' '));
+    return arr.join(' ');
+};
+constructArr('was', 'it', 'in');
+// => was it in the billiards room?
+
+
+// _.from() Function
+// Exercise: implement _.from()
+const from = arr => {
+    return Array.prototype.slice.call(arr)
+}
+
+
+// P.S. FUNCTIONS ARE OBJECTS!
+var add = function (a, b) {
+    console.log(a + b);
+ 	return a + b; 
+};
+add.example = 'testing 123!';

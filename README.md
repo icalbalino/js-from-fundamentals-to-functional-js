@@ -222,3 +222,7 @@ Which is one of the core things in functional utility methods, which is take a l
 - ES6: Arrow Functions
 - Spread Operator
 - Arguments Keyword
+- Default Parameters
+- Array Like-Object
+- `Array.from()` Method
+- `_.from()` Function
