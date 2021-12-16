@@ -226,3 +226,12 @@ Which is one of the core things in functional utility methods, which is take a l
 - Array Like-Object
 - `Array.from()` Method
 - `_.from()` Function
+
+## Scope
+
+**Overview**
+1. Local
+2. Global
+3. Nested Scopes
+4. Precedence
+5. Block Scope
