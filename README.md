@@ -235,3 +235,69 @@ Which is one of the core things in functional utility methods, which is take a l
 3. Nested Scopes
 4. Precedence
 5. Block Scope
+
+## Higher-Order Functions and Callbacks
+
+Higher order functions in JavaScript is what enables us to do these functional programming techniques, because a function in JavaScript is data. It's not true in other languages that functions can be data. 
+
+Functions can be data, it means we can pass functions around and we can return them without invoking them. So really, higher order functions and callbacks are the core concept of functional programming.
+
+
+1. Takes a function as an input (argument)
+```
+
+    element.addEventListener("change", () => {
+        console.log("Our evidence is updated");
+    });
+
+```
+
+2. Returns a function as the output
+```
+
+    const newClue = (name) => {
+        const length = name.length;
+        return (weapon) => {
+            let clue = length + weapon.length;
+            return !!(clue % 1);
+        };
+    };
+
+```
+
+3. Callbacks
+```
+
+    const ifElse = (condition, isTrue, isFalse) => {
+        return condition ? isTrue() : isFalse();
+    };
+
+    ifElse(true, 
+        () => { console.log(true); }, 
+        () => { console.log(false); } 
+    );
+
+    // OR
+
+    const ifElse = (condition, isTrue, isFalse) => {
+        return condition ? isTrue() : isFalse();
+    };
+
+    const logTrue = () => { console.log(true); };
+    const logFalse = () => { console.log(false); };
+    ifElse(true, logTrue, logFalse);
+
+```
+
+4. Passing Arguments
+```
+
+    var increment = function (n) { return n + 1; };
+    var square = function (n) { return n * n; };
+
+    var doMathSoIDontHaveTo = function (n, func) { return func(n); };
+
+    doMathSoIDontHaveTo(5, square); //25
+    doMathSoIDontHaveTo(4, increment); //5
+
+```

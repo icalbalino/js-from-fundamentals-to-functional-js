@@ -207,3 +207,44 @@ _.filter(['ical', 'balino', 'ferin'], function (val, i, list) {
 _.filter(videoData, function (suspectObject) {
     return suspectObject.present
 })
+
+
+// Higher-Order Functions and Callbacks
+// Exercise: Translate into ES6
+var increment = function (n) { return n + 1; };
+var square = function (n) { return n*n; };
+var doMathSoIDontHaveTo = function (n, func) { return func(n); };
+doMathSoIDontHaveTo(5, square);
+doMathSoIDontHaveTo(4, increment);
+
+//solution
+var increment = n => n + 1;
+var square = n => n * n;
+var doMathSoIDontHaveTo = (n, func) => { return func(n); };
+doMathSoIDontHaveTo(4, increment);
+doMathSoIDontHaveTo(5, square);
+
+
+// Passing Arguments
+//How do we pass arguments?
+var ifElse = (condition, isTrue, isFalse, p) => {
+    return condition ? isTrue(p) : isFalse(p);
+};
+ifElse(true, fn1, fn2, 'HI');
+
+// How was this done pre-ES6?
+var ifElse = (condition, isTrue, isFalse, ...args) => {
+    console.log(args) //['HI', 'BYE', 'HOLA']
+    return condition ? isTrue(...args) : isFalse(...args);
+    // isTrue('HI', 'BYE', 'HOLA')
+};
+ifElse(true, fn1, fn2, 'HI', 'BYE', 'HOLA');
+
+// before ES6
+var ifElse = (condition, isTrue, isFalse) => {
+    const args = [].slice.call(arguments,3)
+    return condition ? isTrue.apply(this, args) : isFalse.apply(this, args);
+};
+const logTrue = (msgs) => { console.log(msgs); };
+const logFalse = (msgs) => { console.log(msgs); };
+ifElse(true, logTrue, logFalse, 'a', 'b');
