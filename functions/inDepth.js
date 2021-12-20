@@ -264,3 +264,12 @@ var add = function (a, b) {
  	return a + b; 
 };
 add.example = 'testing 123!';
+
+
+// Exercise: Currying
+// Implement curry() that only takes up to 2 arguments
+// _.curry(func) { }
+
+
+// Exercise Compose
+// Implement your own compose function

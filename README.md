@@ -312,3 +312,39 @@ Functions can be data, it means we can pass functions around and we can return t
     Reduce takes a collection and it takes a callback function and it function is going to return one value together. Reduce always returns one function or one value at the end.
 
 - For more **_.reduce()** click [here](https://lodash.com/docs/4.17.15#reduce)
+
+## Functional Utilities
+- Currying
+    ```
+
+        //_.curry(func, [arity=func.length])
+
+        var abc = function(a, b, c) {
+            return [a, b, c];
+        };
+        var curried = _.curry(abc);
+        curried(1)(2)(3);
+        // => [1, 2, 3]
+        curried(1, 2)(3);
+        // => [1, 2, 3]
+
+    ```
+
+    Currying is when you create a function that can later be called multiple times with different arguments.
+
+- Composing
+    ```
+
+        const consider = (name) => { 
+            return `I think it could be... ${name}`; 
+        };
+        const exclaim  = (statement) => { 
+            return `${statement.toUpperCase()}!`; 
+        };
+        const blame = _.compose(consider, exclaim);
+        blame('you');
+        // => 'I think it could be... YOU!'
+
+    ```
+
+    Composing is when you take two functions and combine them, essentially.
