@@ -236,6 +236,11 @@ Which is one of the core things in functional utility methods, which is take a l
 4. Precedence
 5. Block Scope
 
+### Advanced Scope: Closure
+- Closure Recipe
+
+    Closure it's when functions is inside of a function that creates parent function and take advantage of that by returning a function, that retains access to it's parent funtion even after it has been executed.
+
 ## Higher-Order Functions and Callbacks
 
 Higher order functions in JavaScript is what enables us to do these functional programming techniques, because a function in JavaScript is data. It's not true in other languages that functions can be data. 

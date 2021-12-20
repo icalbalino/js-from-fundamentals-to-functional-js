@@ -197,3 +197,106 @@
     });
 
 })();
+
+
+// Advanced Scope: Closure
+// Closure
+var myAlert = () => {
+    const x = "Help! I think I found a clue!";
+    const alerter = () => {
+        alert(x);
+    };
+    alerter();
+};
+myAlert();
+
+// Closure part 2
+var myAlert = () => {
+    const x = "Help! I think I found a clue!";
+    const alerter = () => {
+        alert(x);
+    };
+    setTimeout(alerter, 1000);
+    console.log('what happens first? this log or the alert?');
+};
+myAlert();
+
+
+// Creating Closure
+var myAlert = () => {
+    const x = "Help! I think I found a clue!";
+    let count = 0;
+    const alerter = () => {
+        alert(`${x} ${++count}`);
+    };
+    return alerter;
+};
+const funcAlert = myAlert(); 
+const funcAlert2 = myAlert(); 
+funcAlert();
+
+
+// Closure Demonstration
+var newClue = (name) => {
+    const length = name.length;
+    return (weapon) => {
+        let clue = length + weapon.length;
+        return !!(clue % 2);
+    };
+};
+const didGreenDoItWithA = newClue('Green');
+didGreenDoItWithA('candlestick');
+didGreenDoItWithA('lead pipe');
+
+// Closure Demonstration 2
+function countClues() {
+    var n = 0;
+    return {
+        count: function() { return ++n; },
+        reset: function() { return n = 0; }
+    };
+};
+
+//ES6 equivalent
+const countClues = () => {
+    let n = 0;
+    return {
+        count: () => n++,
+        reset: () => n = 0
+    };
+};
+
+
+// Closure Recipe
+const findSomeone = () => {
+    const speak = () => {
+        console.log(who);
+    };
+    let who = 'Why hello there, Prof Plum!';
+    return speak;
+};
+const someoneSpeak = findSomeone()
+
+// Closure Recipe 2
+const makeTimer = () => {
+    let elapsed = 0;
+    const stopwatch = () => { return elapsed; };
+    const increase = () => elapsed++;
+    setInterval(increase, 1000);
+    return stopwatch;
+};
+let timer = makeTimer();
+
+// const makeTimer = () => {
+//     console.log('initialized');
+//     let elapsed = 0;
+//     console.log(elapsed);
+//     const stopwatch = () => {
+//         console.log('stopwatch');
+//         return elapsed;
+//     };
+//     const increase = () => elapsed++;
+//     setInterval(increase, 1000);
+//     return stopwatch;
+// };
+// const timer = makeTimer();
