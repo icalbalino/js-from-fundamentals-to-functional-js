@@ -301,3 +301,14 @@ Functions can be data, it means we can pass functions around and we can return t
     doMathSoIDontHaveTo(4, increment); //5
 
 ```
+
+- `_.reduce()` Function
+    ```
+
+        _.reduce(collection, [iteratee=_.identity], [accumulator])
+        
+    ```
+
+    Reduce takes a collection and it takes a callback function and it function is going to return one value together. Reduce always returns one function or one value at the end.
+
+- For more **_.reduce()** click [here](https://lodash.com/docs/4.17.15#reduce)

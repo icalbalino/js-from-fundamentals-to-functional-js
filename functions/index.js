@@ -230,7 +230,7 @@ doMathSoIDontHaveTo(5, square);
 var ifElse = (condition, isTrue, isFalse, p) => {
     return condition ? isTrue(p) : isFalse(p);
 };
-ifElse(true, fn1, fn2, 'HI');
+// ifElse(true, fn1, fn2, 'HI');
 
 // How was this done pre-ES6?
 var ifElse = (condition, isTrue, isFalse, ...args) => {
@@ -238,7 +238,7 @@ var ifElse = (condition, isTrue, isFalse, ...args) => {
     return condition ? isTrue(...args) : isFalse(...args);
     // isTrue('HI', 'BYE', 'HOLA')
 };
-ifElse(true, fn1, fn2, 'HI', 'BYE', 'HOLA');
+// ifElse(true, fn1, fn2, 'HI', 'BYE', 'HOLA');
 
 // before ES6
 var ifElse = (condition, isTrue, isFalse) => {
@@ -247,4 +247,85 @@ var ifElse = (condition, isTrue, isFalse) => {
 };
 const logTrue = (msgs) => { console.log(msgs); };
 const logFalse = (msgs) => { console.log(msgs); };
-ifElse(true, logTrue, logFalse, 'a', 'b');
+// ifElse(true, logTrue, logFalse, 'a', 'b');
+
+
+// reduce()
+const reduce = function (list, cb, initial) {
+    let memo = initial;
+    for (let i = 0; i < list.length; i++) {
+        if (i === 0 && memo === undefined) {
+            memo = list[0];
+        } else {
+            memo = cb(list[i], memo);
+        }
+        
+    }
+    console.log(memo);
+    return memo;
+};
+reduce([1, 2, 3], (v, sum) => v + sum, 0);
+reduce([1, 2, 3], (v, sum) => v + sum);
+
+
+// Exercise 2 : Figure out which room no one claims to be the night of the murder from this data set
+const newDevelopment = [
+    {
+        name: 'Miss Scarlet',
+        present: true,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: true},
+            {'dining room': true},
+            {'billiard room': false},
+            {library: true}
+        ]
+    },
+    {
+        name: 'Reverend Green',
+        present: true,
+        rooms: [
+            {kitchen: true},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': false},
+            {'billiard room': true},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Colonel Mustard',
+        present: true,
+        rooms: [
+            {kitchen: false},
+            {ballroom: false},
+            {conservatory: true},
+            {'dining room': false},
+            {'billiard room': true},
+            {library: false}
+        ]
+    },
+    {
+        name: 'Professor Plum',
+        present: true,
+        rooms: [
+            {kitchen: true},
+            {ballroom: false},
+            {conservatory: false},
+            {'dining room': true},
+            {'billiard room': false},
+            {library: false}
+        ]
+    }
+];
+
+const notInRoom = suspect => {
+    const emptyRooms = reduce(suspect.rooms, (room, memo) => {
+        if (room === false) memo.push(room);
+        return memo;
+    }, [])
+    return emptyRooms;
+};
+const notInRooms = _.map(newDevelopment, notInRoom);
+_.intersection(...notInRooms);
