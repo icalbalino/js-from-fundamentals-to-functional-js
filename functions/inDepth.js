@@ -1,3 +1,4 @@
+const { result } = require('underscore');
 var _ = require('underscore');
 // Functions In-Depth
 
@@ -269,7 +270,30 @@ add.example = 'testing 123!';
 // Exercise: Currying
 // Implement curry() that only takes up to 2 arguments
 // _.curry(func) { }
+const curry = (fn) => {
+    return (arg) => {
+        return (arg2) => {
+            return fn(arg, arg2);
+        }
+    } 
+}
+var abc = function(a, b) {
+    return [a, b];
+};
+var curried = curry(abc);
+curried(1)(2);
+// => [1, 2]
 
 
 // Exercise Compose
 // Implement your own compose function
+const compose = (fn, fn2) => {
+    return (arg) => {
+        const result = fn2(arg);
+        return fn(result);
+    }
+}
+const consider = (name) => { return `I think it could be... ${name}`; };
+const exclaim  = (statement) => { return `${statement.toUpperCase()}!`; };
+const blame = compose(consider, exclaim);
+blame('you');
